@@ -30,6 +30,8 @@ def create_partial_circular_mask(frame):
 
 def calculate_frame_differences(video_path, frame_step=1):
     """
+    Need to fix
+    
     Calculates the (x_diff, y_diff) translation for every nth frame relative to the first frame.
     Returns a list of translation tuples.
     """
@@ -138,6 +140,8 @@ def calculate_frame_differences(video_path, frame_step=1):
 
 def synthesize_video_to_image(video_path, translations, mask):
     """
+    Working
+    
     Create an empty canvas and overlay each masked frame based on calculated translations.
     """
     print(translations)
@@ -190,8 +194,8 @@ def synthesize_video_to_image(video_path, translations, mask):
     return canvas
 
 # Main script execution
-video_path = '/Users/beckettdevoe/Desktop/IMG_1678 (online-video-cutter.com).mp4'
-output_image_path = '/Users/beckettdevoe/Desktop/output_image.png'
+video_path = '/video_path'
+output_image_path = '/output_image.png'
 
 # Step 1: Detect the mask and calculate frame differences
 ret, first_frame = cv2.VideoCapture(video_path).read()
