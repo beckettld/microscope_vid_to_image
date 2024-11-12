@@ -28,7 +28,7 @@ def create_partial_circular_mask(frame):
 
     return inverted_mask
 
-def calculate_frame_differences(video_path, frame_step=1):
+def calculate_translations(video_path, frame_step=1):
     """
     Need to fix
     
